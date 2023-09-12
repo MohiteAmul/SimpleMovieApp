@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+:root{
+    --primary-color: hsla(302, 36%, 15%, 1);
+    --secondary-color: hsla(282, 21%, 38%, 1);
+    --third-color:hsla(214, 70%, 35%, 1);
+
+}
+body{
+    background-color: var(--primary-color);
+}
+.main-container .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.main-container{
+    background-color: var(--primary-color);
+    padding: 20px 0;
+}
+.main-container .logo{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.main-container a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+
+}
+.main-container ul {
+    display: flex;
+}
+.main-container ul li{
+    margin-left: 20px;
+    list-style: none;
+}
+
+/* NOW PLAYING  */
+section.now-playing{
+    padding: 60px;
+    background: url(../images/showcase-bg.jpg) no-repeat center center/cover;
+}
+section h2{
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(244, 194, 15);
+}
+.search{
+    background-color: rgb(244, 194, 15);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.search-box{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+}
+.search-box::placeholder{
+    padding: 5px;
+    border: none;
+    
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie{
+    width: 300px;
+    margin: 1rem;
+    background-color:var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.movie  img{
+    width: 100%;
+}
+.movie-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.movie-info h3{
+    margin-top: 0;
+}
+.movie-info span {
+    background-color: var(--third-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+
+}
+.movie-info span.green{
+    color: rgb(222, 232, 222);
+}
+.movie-info span.orange{
+    color: orange;
+}
+.movie-info span.red{
+    color: red;
+}
+
+.overview{
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+.movie:hover .overview{
+    transform: translateY(0);
+
+}
